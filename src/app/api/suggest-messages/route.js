@@ -1,6 +1,3 @@
-import { openai } from "@ai-sdk/openai";
-import { StreamingTextResponse, streamText } from "ai";
-
 import Groq from "groq-sdk";
 
 const groq = new Groq({

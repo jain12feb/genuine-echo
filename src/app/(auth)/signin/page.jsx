@@ -18,14 +18,12 @@ import { PasswordInput } from "@/components/ui/password-input";
 import { useState, useTransition } from "react";
 import LoadingButton from "@/components/LoadingButton/LoadingButton";
 import { toast } from "sonner";
-import { passwordStrength } from "check-password-strength";
 import { login } from "@/server-actions";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState(false);
-  const [passwordScore, setPasswordScore] = useState("");
 
   const [isPending, startTransition] = useTransition();
 
@@ -41,17 +39,9 @@ export default function LoginForm() {
       case "OAuthAccountNotLinked":
         toast.error("Email already used with different provider");
         break;
-      // return {
-      //   type: "error",
-      //   message: "Email already used with different provider",
-      // };
       case "OAuthCallbackError":
         toast.error("OAuth Provider returned an error");
         break;
-      // return {
-      //   type: "error",
-      //   message: "OAuth Provider returned an error",
-      // };
 
       default:
         return {};
@@ -98,10 +88,6 @@ export default function LoginForm() {
             </Link>
           </div>
           <div>Sign in your account to explore our fabolous services</div>
-          {/* <div className="text-center">
-            Ever wished to hear what your peers truly think, without the
-            pressure of identity?
-          </div> */}
         </div>
       </div>
       <div>
@@ -158,23 +144,10 @@ export default function LoginForm() {
                       <PasswordInput
                         placeholder="********"
                         {...field}
-                        onChange={(e) => {
-                          field.onChange(e);
-                          setPasswordScore(
-                            passwordStrength(e.target.value).value
-                          );
-                        }}
                         tabIndex={2}
                       />
                     </FormControl>
                     <FormMessage />
-                    {/* <p
-                      className={cn(
-                        "text-[0.8rem] font-medium text-destructive"
-                      )}
-                    >
-                      {passwordScore.length > 1 && passwordScore}
-                    </p> */}
                   </FormItem>
                 )}
               />
