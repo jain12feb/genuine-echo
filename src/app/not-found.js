@@ -52,7 +52,7 @@ function NotFound() {
         </h1>
         <p className="text-lg text-gray-600 mb-8 tracking-tight">
           The page you are looking for seems to have gone on a little adventure
-          ride. Don't worry, we'll help you find your way back home.
+          ride. Don&apos;t worry, we&apos;ll help you find your way back home.
         </p>
         <Link
           href="/"

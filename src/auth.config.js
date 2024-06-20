@@ -14,7 +14,7 @@ class InvalidLoginError extends CredentialsSignin {
   }
 }
 
-export default {
+const options = {
   providers: [
     CredentialsProvider({
       id: "credentials",
@@ -85,3 +85,5 @@ export default {
     }),
   ],
 };
+
+export default options;

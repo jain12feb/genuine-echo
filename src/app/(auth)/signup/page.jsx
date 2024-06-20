@@ -128,7 +128,7 @@ export default function RegistrationForm() {
     };
 
     checkUsername();
-  }, [debouncedUsername]);
+  }, [debouncedUsername, isUsernameInvalid]);
 
   return (
     <div className="mx-auto pt-5 space-y-8 h-screen max-w-md">
@@ -214,7 +214,7 @@ export default function RegistrationForm() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormDescription>
-                        Relax, we don't share your email with anyone else.
+                        Relax, we don&apos;t share your email with anyone else.
                       </FormDescription>
                       <FormControl>
                         <Input placeholder="john.dae@example.com" {...field} />

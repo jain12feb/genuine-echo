@@ -26,7 +26,7 @@ import { toast } from "sonner";
 import { useSession } from "next-auth/react";
 
 const AcceptMessageToggle = () => {
-  const form = useForm({
+  const { setValue, ...form } = useForm({
     resolver: zodResolver(acceptMessagesSchema),
     // defaultValues: {
     //   isAcceptingMessages: true,
@@ -44,7 +44,7 @@ const AcceptMessageToggle = () => {
       const { data } = await axios.get("/api/accept-messages");
 
       if (data.success) {
-        form.setValue("isAcceptingMessages", data.isAcceptingMessages);
+        setValue("isAcceptingMessages", data.isAcceptingMessages);
       } else {
         toast.error(data.message);
       }
@@ -52,7 +52,7 @@ const AcceptMessageToggle = () => {
       console.log(error);
       toast.error(error?.response?.data?.message || "Something went wrong");
     }
-  }, [form.setValue]);
+  }, [setValue]);
 
   const handleCheckboxChange = async (value) => {
     try {
@@ -77,7 +77,7 @@ const AcceptMessageToggle = () => {
 
   useEffect(() => {
     handleIsAcceptingMessages();
-  }, []);
+  }, [handleIsAcceptingMessages]);
   return (
     <TooltipProvider>
       <Tooltip>

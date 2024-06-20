@@ -10,7 +10,7 @@ export default async function SiteHeader() {
     <header className="w-full">
       <div className="flex items-center justify-between h-14 px-4">
         <Link className="flex items-center" href="/">
-          <img src="/logo-base-32x32.png" />
+          <img src="/logo-base-32x32.png" alt="logo" />
           <h1 className="text-xl hidden font-semibold uppercase md:flex justify-center mx-1 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
             Genuine Echo
           </h1>

@@ -105,7 +105,7 @@ export default function LoginForm() {
                   <FormItem>
                     <FormLabel>Email or Username</FormLabel>
                     <FormDescription>
-                      Relax, we don't share your details with anyone else.
+                      Relax, we don&apos;t share your details with anyone else.
                     </FormDescription>
                     <FormControl>
                       <Input
