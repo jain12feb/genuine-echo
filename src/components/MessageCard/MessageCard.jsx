@@ -80,8 +80,8 @@ const MessageCard = ({ message, handleMessageDelete }) => {
               <AlertDialogHeader>
                 <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  Your session is about to end. Please save any unsaved work
-                  before proceeding.
+                  This action cannot be undone. This will permanently delete
+                  this feedback from our servers.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>

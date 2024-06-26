@@ -46,7 +46,7 @@ export default function Home() {
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 subpixel-antialiased">
                 Ever wished to hear what your peers truly think abouts you
-                without the presure of indentity?{" "}
+                without the pressure of indentity?{" "}
                 <strong className="text-gray-700">Genuine Echo</strong> offers a
                 safe space where you can receive anonymous messages from known
                 voices throughout the huge internet.
